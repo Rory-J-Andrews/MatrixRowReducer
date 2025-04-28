@@ -1,0 +1,39 @@
+Welcome to the Matrix Row Reducer!
+To begin, you'll need to create a blank file, Input.txt, in the directory.
+Next, you'll need to make sure that Input.txt has the correct formatting:
+Each row should be on a new line (with no spaces between).
+Each column should be separated by one space.
+There should be NO OTHER entries in text file beyond the given matrix.
+Also: After the final row, press enter to make sure there is a new line beneath.
+
+
+Algorithm information:
+Row Echelon Algorithm:
+This creates a row echelon form of a matrix.
+We iterate primarilly over columns, not rows. Our goal is to create a kind of diagonal series
+of pivots - this will make things much easier when we create the RREF.
+
+So we start at the diagonal entry for the relevant column. If that entry is not zero, then we
+proceed to add multiples of the current row to each row beneath such that their entries in
+the current column become zero. Then we move on to the diagonal entry of the next column.
+
+Alternatively, if the diagonal entry is zero, then we check to see if all of the entries
+beneath are also zero. If not, then we can add one of those rows to the current row, so as
+to remove the zero, and continue with the process of making the entries beneath zero.
+
+If all of the entries beneath are zero, then we cut our losses and move on to the next column
+- importantly, in that case we do not go to the diagonal of the next column, but rather
+stay in the same row, as we never found a pivot for it.
+
+After doing this for each column, each pivot will be to the right of above pivots,
+all values below each pivot will be 0, and any zero rows will be on the bottom of the matrix.
+So we will have a row echelon form.
+
+
+Reduced Row Echelon:
+Now that we have a row echelon form, it is comparatively easier to get to RREF.
+This time, we iterate over rows, not columns, and look for the pivot of each row. When we find it,
+we then add a multiple of the current row to each row above it such that all of the values above in
+the same column become 0.
+Then, we simply divide each row by the value of its pivot, so as to make its pivot equal 1.
+After doing this, we will have the RREF form of the matrix.
