@@ -4,7 +4,13 @@ Next, you'll need to make sure that Input.txt has the correct formatting:
 Each row should be on a new line (with no spaces between).
 Each column should be separated by one space.
 There should be NO OTHER entries in text file beyond the given matrix.
-Also: After the final row, press enter to make sure there is a new line beneath.
+After the final row, press enter to make sure there is a new line beneath.
+There should be NO other lines beneath that final line. 
+
+Here is an example of a valid entry. The "(Line x):" should be deleted.
+(Line 1):1 2
+(Line 2):3 4
+(Line 3):
 
 
 Algorithm information:
